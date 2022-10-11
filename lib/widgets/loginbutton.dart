@@ -15,15 +15,17 @@ class LoginButton extends StatefulWidget {
 class _LoginButtonState extends State<LoginButton> {
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-          minimumSize: const Size(300, 75),
-          textStyle: TextStyle(
-            fontWeight: FontWeight.normal,
-            fontSize: 20,
-          ),
-          backgroundColor: Color(0xff010E16), // background color of the button
-          foregroundColor: Color(0xffF5F5F5)), // color of the text
+    return OutlinedButton(
+      style: OutlinedButton.styleFrom(
+        minimumSize: const Size(double.infinity, 75),
+        textStyle: TextStyle(
+          fontWeight: FontWeight.normal,
+          fontSize: 30,
+        ),
+        side: BorderSide(width: 1.5, color: Color(0xff314B61)),
+        backgroundColor: Color(0xff010E16), // background color of the button
+        foregroundColor: Color(0xffF5F5F5), // color of the text
+      ),
       onPressed: () {
         //Navigator.push(context, MaterialPageRoute(builder: (context) => ,)) //Sayfa adını bekiyorum.
       },
