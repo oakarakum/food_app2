@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
 
 class CatergoryListView extends StatefulWidget {
   const CatergoryListView({super.key});
@@ -10,18 +9,40 @@ class CatergoryListView extends StatefulWidget {
 }
 
 class _CatergoryListViewState extends State<CatergoryListView> {
+  List<String> picAssets = [
+    "assets/listViewImages/pizza.png",
+    "assets/listViewImages/pan-cake.png",
+    "assets/listViewImages/sandwich.png",
+    "assets/listViewImages/ice-cream.png",
+    "assets/listViewImages/noodles.png"
+  ];
+  List<String> textAssets = [
+    "Pizza",
+    "Pan-cake",
+    "Sandwich",
+    "Ice-cream",
+    "Noodles"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      //Bu container'ı silmeyi unutma
+      height: 114,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: 5, //değişecek
+          itemCount: picAssets.length,
           itemBuilder: ((context, index) {
-            return Container(
-                //Listview'ın fotoğrafı gelecek
-                //Listview'ın TEXT'İ gelecek
-                );
+            return Column(
+              children: [
+                SizedBox(
+                  child: Image.asset(
+                    picAssets[index],
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                Text(textAssets[index])
+              ],
+            );
           })),
     );
   }
