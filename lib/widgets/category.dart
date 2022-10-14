@@ -16,14 +16,11 @@ class _CategoryWidgetState extends State<CategoryWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: double.infinity,
-      color: Color.fromARGB(15, 143, 43, 9),
+      height: 100,
       child: Stack(
         children: [
           Container(
-            height: 150,
-            width: 150,
+            height: 100,
           ),
           Image.asset(
             widget.categoryImages,
@@ -31,7 +28,7 @@ class _CategoryWidgetState extends State<CategoryWidget> {
           ),
           Positioned(
             top: 87,
-            left: 28,
+            left: 15,
             child: Text(
               widget.categoryTexts,
               style: TextStyle(
