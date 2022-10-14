@@ -15,16 +15,33 @@ class CategoryWidget extends StatefulWidget {
 class _CategoryWidgetState extends State<CategoryWidget> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
-          child: Image.asset(
+    return Container(
+      height: 200,
+      width: double.infinity,
+      color: Color.fromARGB(15, 143, 43, 9),
+      child: Stack(
+        children: [
+          Container(
+            height: 150,
+            width: 150,
+          ),
+          Image.asset(
             widget.categoryImages,
             fit: BoxFit.contain,
           ),
-        ),
-        Text(widget.categoryTexts)
-      ],
+          Positioned(
+            top: 87,
+            left: 28,
+            child: Text(
+              widget.categoryTexts,
+              style: TextStyle(
+                  color: Color.fromARGB(255, 2, 26, 41),
+                  fontWeight: FontWeight.w400,
+                  fontSize: 15),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
