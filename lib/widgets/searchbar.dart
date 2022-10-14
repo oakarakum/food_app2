@@ -36,6 +36,7 @@ class _SearchBarState extends State<SearchBar> {
             ),
             child: TextFormField(
               textAlign: TextAlign.start,
+              textAlignVertical: TextAlignVertical.bottom,
               cursorHeight: 25,
               cursorColor: Colors.green,
               decoration: InputDecoration(
@@ -47,9 +48,7 @@ class _SearchBarState extends State<SearchBar> {
                 focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.circular(10)),
-                contentPadding: EdgeInsets.only(
-                  right: 5,
-                ),
+                contentPadding: EdgeInsets.only(bottom: 10),
                 isDense: true,
                 hintText: "Search Your food or Restaurant",
                 hintStyle: TextStyle(color: Color(0xffCFCFCF)),
