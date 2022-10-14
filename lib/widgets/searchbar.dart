@@ -20,42 +20,44 @@ class _SearchBarState extends State<SearchBar> {
       children: [
         Flexible(
           child: Container(
-            height: 45,
+            height: 40,
             width: 300,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
               boxShadow: [
                 BoxShadow(
                     blurStyle: BlurStyle.outer,
-                    blurRadius: 3,
-                    offset: Offset(2, 2),
-                    color: Colors.black)
+                    spreadRadius: 3,
+                    blurRadius: 2,
+                    offset: Offset(1, 3),
+                    color: Color.fromARGB(255, 179, 169, 169))
               ],
               color: Colors.white,
             ),
             child: TextFormField(
+              textAlign: TextAlign.start,
               cursorHeight: 25,
               cursorColor: Colors.green,
               decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5)),
-                  enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                      borderRadius: BorderRadius.circular(5)),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                      borderRadius: BorderRadius.circular(5)),
-                  contentPadding: EdgeInsets.only(top: 15, left: 5),
-                  isDense: true,
-                  prefixIcon: Align(
-                    heightFactor: 1,
-                    widthFactor: 1,
-                    child: ImageIcon(
-                      AssetImage("assets/search-icon.png"),
-                      size: 30,
-                      color: Color.fromARGB(255, 21, 20, 20),
-                    ),
-                  )),
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(10)),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(10)),
+                contentPadding: EdgeInsets.only(
+                  right: 5,
+                ),
+                isDense: true,
+                hintText: "Search Your food or Restaurant",
+                hintStyle: TextStyle(color: Color(0xffCFCFCF)),
+                prefixIcon: ImageIcon(
+                  AssetImage("assets/search-icon.png"),
+                  color: Color.fromARGB(255, 21, 20, 20),
+                ),
+              ),
             ),
           ),
         ),
