@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_app2/widgets/appbarmenu.dart';
 import 'package:food_app2/widgets/banner.dart';
+import 'package:food_app2/widgets/bottomnavibar.dart';
 import 'package:food_app2/widgets/category.dart';
 import 'package:food_app2/widgets/restaurantList.dart';
 import 'package:food_app2/widgets/searchbar.dart';
@@ -35,6 +36,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20),
