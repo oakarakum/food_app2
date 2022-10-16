@@ -17,7 +17,32 @@ class HomePageScreen extends StatefulWidget {
 }
 
 class _HomePageScreenState extends State<HomePageScreen> {
-  int active_page = 0;
+  List<String> restnamess = [
+    "Burger King",
+    "Pizzania",
+    "Pancake",
+  ];
+  List<String> scorings = [
+    "4.5",
+    "4.6",
+    "4.2",
+  ];
+  List<String> deliverytimess = [
+    "25-35 mins",
+    "20-25 mins",
+    "25-35 mins",
+  ];
+  List<String> distances = [ 
+    "8 km",
+    "7 km",
+    "8 km",
+  ];
+  List<String> restpicss = [
+    "assets/restaurantNames/bking.png",
+    "assets/restaurantNames/Pizzania.png",
+    "assets/restaurantNames/pancake.png",
+  ];
+
   List<String> categoryImageList = [
     "assets/listViewImages/pizza.png",
     "assets/listViewImages/pan-cake.png",
@@ -92,10 +117,10 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 height: 220,
                 width: 353,
                 child: ListView.builder(
-                    itemCount: 5,
+                    itemCount: scorings.length,
                     shrinkWrap: true,
                     itemBuilder: ((context, index) {
-                      return RestaurantList();
+                      return RestaurantList(deliverytimes: deliverytimess[index],restnames: restnamess[index], distance: distances[index],restpics: restpicss[index],scoring: scorings[index],);
                     })),
               )
             ],
