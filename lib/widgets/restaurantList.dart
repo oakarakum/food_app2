@@ -22,7 +22,7 @@ class RestaurantList extends StatefulWidget {
 }
 
 class _RestaurantListState extends State<RestaurantList> {
-  bool currentRestaurantIndex = true;
+  bool currentRestaurantIndex = false;
   @override
   Widget build(BuildContext context) {
     return Padding(
