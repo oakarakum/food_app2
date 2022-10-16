@@ -90,7 +90,7 @@ class _RestaurantListState extends State<RestaurantList> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.only(bottom: 69, left: 30),
+                  padding: EdgeInsets.only(bottom: 69, left: 10),
                   child: Container(
                     height: 40,
                     width: 80,
